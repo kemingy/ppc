@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "shortcut",
+]
+resolver = "3"
