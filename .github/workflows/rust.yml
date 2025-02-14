@@ -1,0 +1,35 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - '.github/workflows/rust.yml'
+      - '**/src/**'
+      - '**/Cargo.*'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - '.github/workflows/rust.yml'
+      - '**/src/**'
+      - '**/Cargo.*'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+      with:
+        toolchain: nightly
+    - name: Install lint tools
+      run: |
+        rustup component add rustfmt clippy
+    - name: Lint
+      run: |
+        make lint
