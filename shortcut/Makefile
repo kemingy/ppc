@@ -19,5 +19,8 @@ baseline: baseline.cc
 linear: linear.cc
 	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
 
+instruction: instruction.cc
+	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
+
 clean:
 	rm -f shortcut.o shortcut.s
