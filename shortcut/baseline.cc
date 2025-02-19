@@ -19,6 +19,7 @@ void random_graph(int n, std::vector<float>& graph) {
 }
 
 void step(std::vector<float>& graph, std::vector<float>& res, int n) {
+    #pragma omp parallel for
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             for (int k = 0; k < n; ++k) {
