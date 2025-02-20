@@ -22,8 +22,11 @@ linear: linear.cc
 instruction: instruction.cc
 	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
 
+vec: vec.cc
+	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
+
 # may need to run with `taskset -c 0` if the CPU is heterogeneous
-profile:
+perf:
 	perf stat -r 5 -d -e instructions -e cycles ./shortcut.o 1000
 
 clean:
