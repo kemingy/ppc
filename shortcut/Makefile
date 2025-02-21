@@ -31,6 +31,12 @@ register: register.cc
 permutation: permutation.cc
 	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
 
+prefetch: prefetch.cc
+	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
+
+cache: cache.cc
+	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
+
 # may need to run with `taskset -c 0` if the CPU is heterogeneous
 perf:
 	perf stat -r 5 -d -e instructions -e cycles ./shortcut.o 1000
