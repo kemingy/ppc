@@ -25,7 +25,10 @@ instruction: instruction.cc
 vec: vec.cc
 	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
 
-reuse: reuse.cc
+register: register.cc
+	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
+
+permutation: permutation.cc
 	$(COMPILER) $(FLAGS) -o $(OUTPUT) $@.cc
 
 # may need to run with `taskset -c 0` if the CPU is heterogeneous
