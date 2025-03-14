@@ -6,6 +6,16 @@ Code for the course "[Programming Parallel Computers](https://ppc.cs.aalto.fi/)"
 - Exercises
   - [correlated pairs](./correlated_pairs/)
 
+## Methods
+
+- linear scan the matrix (row/column based)
+- use block to allow the compiler do auto-vectorization
+- use GCC aligned vector for explicit vectorization
+- re-schedule the memory access order to utilize the register cache
+- re-design the memory access pattern to utilize the register cache
+- prefetch 20 iterations
+- re-order the inter and outer loop to cache more
+
 ## OpenMP
 
 - basic
