@@ -1,0 +1,20 @@
+[workspace]
+channels = ["conda-forge"]
+name = "ppc"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+
+[feature.cuda]
+platforms = ["linux-64"]
+channels = ["nvidia"]
+system-requirements = {cuda = "12"}
+
+[feature.cuda.dependencies]
+cuda-toolkit = ">=12.6.2,<13"
+
+[environments]
+cuda = ["cuda"]

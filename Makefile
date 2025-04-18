@@ -7,3 +7,6 @@ lint:
 
 asm:
 	@cargo rustc -r -p shortcut -- --emit asm
+
+cuda:
+	@pixi shell -e cuda
