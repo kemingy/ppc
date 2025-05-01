@@ -16,6 +16,13 @@ Code for the course "[Programming Parallel Computers](https://ppc.cs.aalto.fi/)"
 - prefetch 20 iterations
 - re-order the inter and outer loop to cache more
 
+## SIMD
+
+- Latency: time to perform an operation from start to finish.
+- Throughput: how many operations are completed per time unit, in the long run.
+
+So roughly, the parallel num is `latency x throughput`.
+
 ## OpenMP
 
 - basic
